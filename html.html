@@ -7,6 +7,7 @@
     body{
         background-color:rgb(123, 160, 300);
         font-family:monospace;
+        background-image: url(http://www.publicdomainpictures.net/pictures/130000/nahled/fine-green-background-pattern.jpg)
     }
     h1{
         text-align:center;
@@ -30,23 +31,113 @@
     p:hover{
         background-color:rgb(255, 0, 0);
     }
-    
+    #bar{
+        border:2px solid black;
+        padding:5px;
+        text-align:center;
+    }
+    /* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 250px;
+	height: 200px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+#intro{
+    color:white;
+}
+#about{
+    color:white;
+}
+#html{
+    color:white;
+}
+#hard{
+    color:white;
+}
+
+
+
         
     </style>
     <body>
-        <p id="bar"> <a href="intro.html"> Intro</a> <a href="aboutme.html">About Me</a> <a href="html.html"> HTML</a> <a href="hardware.html"> Hardware</a></p>
+        <p id="bar"> <a id="intro" href="intro.html"> Intro</a> <a id="about" href="aboutme.html">About Me</a> <a id="html" href="html.html"> HTML</a> <a id="hard" href="hardware.html"> Hardware</a></p>
         <h1>HTML!</h1>
-        <h2>What is HTML and Why is it Important?</h2>
-       <p>HTML stands for Hypertext Markup Language. It is used as the standard markup language used to create web pages. Tim Berners-Lee was the creator of HTML and was created in 1999. The language is written in the form of HTML elements consisting of tags enclosed in angle brackets. Browsers do not display the HTML tags and scripts, but use them to interpret the content of the page.</p>
-        <h2>What is CSS and Why is it Important?</h2>
-        <p>CSS stands for Cascading Style Sheet. CSS can be added to individual HTML elements as the value of the style attribute. This method is called inline CSS. CSS was developed to provide style sheets for the web. One requirement for a web style sheet language was for style sheets to come from different sources on the web. CSS is a style sheet language used for describing the look and formatting of a document written in a markup language. </p>
-        <h2>How do Tags Work?</h2>
-        <p>HTML tags are the hidden keywords within a web page that define how the browser must format and display the content. A tag is written by adding a (<) and a (>) to an element that is put inside them. </p>
-        <h2>What are Attributes and How do They Work?</h2>
-        <p>To change the attributes you use the by changing the attribute you want. For example, the id, title, class, and style are all attributes you can change.</p>
+        <h2>HTML</h2>
+       <p>HTML stands for Hypertext Markup Language. It is used to make web pages. Tim Berners-Lee was the creator of HTML and was created in 1989. The language is written in the form of HTML elements consisting of tags enclosed in angle brackets. HTML is like the skeleton of the website. You tell it what to do and show and it will complete that order in the website when the viewer is loking at it. HTML has improved since it was invented. There has been many updates with HTML to make it even better than before. There has been over ten different updates for HTML! HTML is made up of many different sections. For example, some of them are elements, tags, and attributes, but there are many more.</p>
+        <h2>CSS</h2>
+        <p>CSS stands for Cascading Style Sheet. It was invented by Håkon Wium Lie on October 10, 1994. CSS has also upgraded since it has come out. There has been at least five updates to CSS to make it even better than before! CSS can be added to individual HTML elements as the value of the style attribute. CSS was developed to provide style sheets for the web. CSS is a style sheet language used for describing the look and formatting of a document written in a markup language. CSS is also used to move all the borders, font, colors, backgrounds, etc. to another file so you can make your HTML file much more simple.  </p>
+        <h2>Tags</h2>
+        <p>HTML tags are like commands, anything you put in the angle brackets will command the webpage to do it. A tag is written by adding a (<) and a (>) to an element that is put inside them. For example, the p, h1, body, a, style, and head tags are some examples of tags, but there are many more tags than just these. Each tag is made to do something. The p tag is made to make a paragraph. </p>
+        <h2>Attributes</h2>
+        <p>HTML attributes are modifiers that modify an element type. Some HTML attributes are the href attribute, the id attribute, and the title attribute. There are many more attributes! To change the attributes you add or change the value of the attribute.</p>
         <h2>Description of at Least Four Different Tags</h2>
         <p>The 'p' tag is use to make a paragraph. The 'style' tag is used to customize your page and make it look the way you want it to. The 'br' tag is used to add a break in a text if you want to seperate song lyrics just add the 'br' tag where you want it to break. The 'h1, h2, h3, h4, h5, h6' tags are used to make a heading but the smaller the number the bigger the text will be on the page. So the 'h1' tag has the biggest heading font and the 'h6' tag has the smallest heading font size.</p>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img id="html-css" src="http://www.bobbyberberyan.com/wp-content/uploads/2012/03/HTML5CSS3Logos.svg" alt="html five and css three" width="250">
+		</div>
+		<div class="back">
+			<p>HTML 5 and CSS 3</p>
+		</div>
+	</div>
+</div>
+ <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img id="tags" src="https://www.volacci.com/files/titletag.jpg" alt="html tags" width="250">
+		</div>
+		<div class="back">
+			<p>HTML Tags</p>
+		</div>
+	</div>
+</div>
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img id="attributes" src="http://www.w3schools.in/wp-content/uploads/2014/07/HTML-attribute.jpg" alt="html attributes" width="300">
+		</div>
+		<div class="back">
+			<p>HTML Attributes</p>
+		</div>
+	</div>
+</div>
         <a href="index.html"> <img src="http://downloadicons.net/sites/default/files/left-arrow-symbol-icon-76267.png" alt="arrow" width="50"> go back</a>
     </body>
-    
 </html>

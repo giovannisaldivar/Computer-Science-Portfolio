@@ -5,18 +5,220 @@
     </head>
     <style>
     body{
-        background-color:rgb(0, 255, 255);
+        background-image: url(http://orig13.deviantart.net/d63d/f/2012/036/8/7/sky_background_by_09shootingstar90-d4oq6xw.png);
+        background-size:;
+        background-repeat:no-repeat;
     }
     #bar{
         border:2px solid black;
         padding:5px;
         text-align:center;
+    }
+        h1{
+        text-align:center;
+    }
+    /* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 200px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 1.2s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+#motherboard{
+	position: absolute;
+            top: 100x;
+            left: 50px;
+}
+#cpu{
+	position: absolute;
+            top: 350px;
+            left: 50px;
+    }
+#ram{
+	position: absolute;
+            top: 650px;
+            left: 50px;
+}
+#hard-drive{
+	position: absolute;
+            top: 650px;
+            left: 500px;
+}
+#keyboard{
+	position: absolute;
+	top:650px;
+	right:50px;
+}
+#mouse{
+	position: absolute;
+            top: 370px;
+            left: 1000px;
+}
+#monitor{
+	position:absolute;
+	top:100px;
+	left:1000px;
+}
+#bus{
+	position:absolute;
+	top:120px;
+	left:500px;
+}
+#computer{
+	position:absolute;
+	top:350px;
+	left:550px;
+}
+
+body{
+	color:white;
+}
+#intro{
+	color:white;
+}
+#about{
+	color:white;
+}
+#html{
+	color:white;
+}
+#harware{
+	color:white;
+}
+
+    
         
     </style>
     <body>
-        <p id="bar"> <a href="intro.html"> Intro</a> <a href="aboutme.html">About Me</a> <a href="html.html"> HTML</a> <a href="hardware.html"> Hardware</a></p>
+        <p id="bar"> <a id="intro" href="intro.html"> Intro</a> <a id="about" href="aboutme.html">About Me</a> <a id="html" href="html.html"> HTML</a> <a id="harware" href="hardware.html"> Hardware</a></p>
         <h1>Hardware</h1>
-        
+        <div id="motherboard" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="http://images.anandtech.com/doci/7008/image002_575px.png" alt="motherboard" width="250">
+		</div>
+		<div class="back">
+			<p><div id="mother"><strong>Motherboard</strong></div><br>The motherboard is the main circuit board. It contains all the buses found in a computer. These buses allow data to travel between the various components in a computer. A motherboard is also known as the system board, the backplane, or the main board. The chip set is one of the most important components in the mother board. It allows the CPU to communicate.
+.</p>
+		</div>
+	</div>
+</div>
+<div id="cpu" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="http://1.bp.blogspot.com/-lxkzMXM_0S0/VRehhFJsNbI/AAAAAAAAALo/ZHbaj7aLhvU/s1600/cpuz%2Blogo.png" alt="cpu" width="250">
+		</div>
+		<div class="back">
+			<p><div id="c-p-u"><strong>CPU</strong></div><br>The CPU (Central Processing Unit) is in charge of processing data. How it will process data will depend on the program. The program can be anything. But for the CPU it makes no difference. It just follows the orders contained inside the program.</p>
+		</div>
+	</div>
+</div>
+<div id="ram" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="https://bim9.com/wp-content/uploads/2012/01/RAM_SM.png" alt="ram" width="250">
+		</div>
+		<div class="back">
+			<p><strong>RAM</strong></p><br>
+			<p>RAM stands for Random Access Memory. It takes things from the hard drive and stores it for faster access. For example, if you are playing a game the computer takes all the textures and puts it on the RAM when the game starts and loads programs faster. </p>
+		</div>
+	</div>
+</div>
+<div id="hard-drive" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="http://www.legitreviews.com/images/reviews/NEWS/WDRaptorX150.gif" alt="hard drive" width="250">
+		</div>
+		<div class="back">
+			<p><strong>Hard Drive</strong></p><br>
+			<p>Storage is the hard drive's responsibility. Everything you keep on your computer is on a hard drive like pictures, music, videos, programs, your preferences, even your operating system they're all stored on your computer's hard drive.</p>
+		</div>
+	</div>
+</div>
+<div id="keyboard" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="http://assets.razerzone.com/eeimages/products/76/razer-tron-keyboard-gallery-2.png" alt="keyboard" width="250">
+		</div>
+		<div class="back">
+			<p><strong>Keyboard</strong></p><br>
+			<p>A keyboard is a typewriter-style device, which uses an arrangement of keys, to act as switches to write a certain number or letter. It is used to input text, characters and other commands into a computer. Christopher Latham Sholes was an American inventor who invented the first practical typewriter.</p>
+		</div>
+	</div>
+</div>
+<div id="mouse" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="http://gamingshogun.com/wp-content/uploads/2012/07/ouroboros-01-620x465.png" alt="mouse" width="250">
+		</div>
+		<div class="back">
+			<p><strong>Mouse</strong></p><br>
+			 <p>A mouse is a pointing device that detects motion relative to a surface. Which allows for fine control of a graphical user interface. It contains at least three buttons. The right and left click and the scroll wheel. They are used to click on certain things on the computer monitor. The scrll wheel is able to scroll through long webpages fastly and easily. Some mice also have extra buttons and cooler functiions than the standard mouse.
+		</div>
+	</div>
+</div>
+<div id="monitor" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="http://icons.iconarchive.com/icons/iconlicious/misc/512/Monitor-icon.png" alt="monitor" width="250">
+		</div>
+		<div class="back">
+			<p><strong>Monitor</strong></p><br>
+			A monitor is used to provide visual output from a computer. It allows you to see anything that it is connected to your computer. It displays anything that your computer tells it to. It can displays your work you are doing or your game that you are playing. It also shows where your cursor is.
+		</div>
+	</div>
+</div>
+<div id="bus" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/PCIExpress.jpg" alt="bus" width="250">
+		</div>
+		<div class="back">
+			<p><strong>Bus</strong></p><br>
+			<p>A bus is a communication system that transfers data between components inside a computer, or between computers. It is how all the different components in a computer with one another. </p>
+		</div>
+	</div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <a href="index.html"> <img src="http://downloadicons.net/sites/default/files/left-arrow-symbol-icon-76267.png" alt="arrow" width="50"> go back</a>
     </body>
     
 </html>
