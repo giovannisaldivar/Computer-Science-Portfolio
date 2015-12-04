@@ -8,6 +8,7 @@ form.addEventListener( 'submit', function(evt) {
   evt.preventDefault();
 }, false);
 
+//Adds strike through the list before deleting the item
 todo.addEventListener( 'click', function(evt) {
   var tar = evt.target;
   if(tar.style.textDecoration === "line-through"){
@@ -19,7 +20,7 @@ todo.addEventListener( 'click', function(evt) {
 }, false);
 
 
-
+//changes the color of the bar
 field.style.color= "pink";
 if(field.style.color= "pink"){
     field.style.backgroundColor= "red"
